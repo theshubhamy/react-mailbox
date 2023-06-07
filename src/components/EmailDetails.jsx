@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 
 const EmailDetails = ({ emails }) => {
   const { id } = useParams();
-  const email = emails.find((email) => email.id === id);
+  console.log(id);
+  const email = emails.find((email) => email.id == id);
 
   if (!email) {
     return <div>Email not found.</div>;
